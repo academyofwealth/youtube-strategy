@@ -25,7 +25,17 @@
 </head>
 <body>
     <script>
-        ml('show', 'ien9su', true);
+        window.onload = function() {
+            ml('show', 'ien9su', true);
+            // Backup trigger after 1 second
+            setTimeout(function() {
+                ml('show', 'ien9su', true);
+            }, 1000);
+        }
     </script>
+    <!-- Backup trigger -->
+    <div style="text-align: center; padding: 20px;">
+        <p>If the form doesn't appear automatically, <a href="javascript:void(0)" onclick="ml('show', 'ien9su', true)">click here</a>.</p>
+    </div>
 </body>
 </html>
